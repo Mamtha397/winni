@@ -1,5 +1,12 @@
 <HTML>
     <head>
+        <title>Winni</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <style>
             #inner {
                 margin-left: 42%;
@@ -13,10 +20,9 @@
                 height: 36px;
                 background: url(https://d3s16h6oq3j5fb.cloudfront.net/img/css-sprites-icon.png) -331px -232px;
             }
-            input{
+            #searchBox{
                 border: 2px solid transparent;
                 background-color: transparent;
-                width: 30%;
                 height: 40px;
                 padding: 10px;
                 color: rgb(143, 145, 150);
@@ -44,137 +50,555 @@
                 height: 33px;
                 background: url(https://d3s16h6oq3j5fb.cloudfront.net/img/css-sprites-icon.png) -479px -393px;
             }
+            a{
+                color: black;
+            }
+            .container-fluid {
+                overflow: hidden;
+                background: #262626;
+                color: #627482 !important;
+                margin-bottom: 0;
+                padding-bottom: 0
+            }
+
+            small {
+                font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+            }
+
+            .bold-text {
+                color: #989c9e !important
+            }
+
+            .mt-55 {
+                margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+            }
+
+            h3 {
+                font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+            }
+
+            .social {
+                font-size: 21px !important
+            }
+
+            .rights {
+                font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+            }
         </style>
     </head>
     <body>
-        <div style="display: flex; flex-direction: row; padding: 10px 0 25px 0;">
+        <nav class="d-flex flex-row-reverse navbar navbar-expand-sm navbar-light bg-light">
+            <p class="ml-5">Track Order</p>
+            <p class="ml-5">Currency</p>
+            <p class="ml-5">Partner With us</p>
+            <p class="ml-5">Visit Stores</p>
+            <p class="ml-5">Offers</p>
+            <p class="ml-5">Help</p>
+            <p class="ml-5">+91 - 7678564535</p>
+          </nav>
+        <nav class="d-flex flex-col navbar sticky-top navbar-expand-sm navbar-light bg-light">
             <a id="home_logo" style="margin-right: 25px;"></a>
-            <input placeholder="Search for gifts">
-            <img width="23px" height="23px" style="margin-top: 8px;" src="//d3s16h6oq3j5fb.cloudfront.net/img/search-icon.png">
-            <div class="left bg-express_delivery_1 ">
-            </div>
-            <div class="left" style="padding-left:4px;">
-                <div style="margin-top: 5px; font-size:13px;font-weight:700">Delivery In</div>
-                <div style="color:#ED217C; line-height: 16px;font-weight:700">2 hours
+            <ul class="navbar-nav ml-5">
+              <!-- Dropdown -->
+              <li class="d-flex flex-row nav-item dropdown">
+                <input id="searchBox" placeholder="Search for gifts">
+                <img width="23px" height="23px" style="margin-top: 8px;" src="//d3s16h6oq3j5fb.cloudfront.net/img/search-icon.png">
+              </li>
+              <li class="d-flex flex-row nav-item dropdown ml-5">
+                <div class="left bg-express_delivery_1 ">
                 </div>
-            </div>
-            <div class="left bg-express_delivery_2 ">
-                <img src="//d3s16h6oq3j5fb.cloudfront.net/img/profile.png" style="height: 27px;margin-top: 5px;">
-            </div>
-            <div class="left" style="padding-left:4px;">
-                <div style="margin-top: 5px; font-size:13px;font-weight:700">Delivery In</div>
-                <div style="color:#ED217C; line-height: 16px;font-weight:700">2 hours
+                <div class="left" style="padding-left:4px;">
+                    <div style="margin-top: 5px; font-size:13px;font-weight:700">Delivery In</div>
+                    <div style="color:#ED217C; line-height: 16px;font-weight:700">2 hours
+                    </div>
                 </div>
-            </div>
-            <div class="left bg-express_delivery_3 ">
-            </div>
-            <div class="left" style="padding-left:4px;">
-                <div style="margin-top: 5px; font-size:13px;font-weight:700">Delivery In</div>
-                <div style="color:#ED217C; line-height: 16px;font-weight:700">2 hours
+              </li>
+              <li class="d-flex flex-row nav-item dropdown ml-5">
+                <div class="left bg-express_delivery_2 ">
+                    <img src="//d3s16h6oq3j5fb.cloudfront.net/img/profile.png" style="height: 27px;margin-top: 5px;">
                 </div>
-            </div>
-            <div class="left bg-express_delivery_4 ">
-            </div>
-            <div class="left" style="padding-left:4px;">
-                <div style="margin-top: 5px; font-size:13px;font-weight:700">Delivery In</div>
-                <div style="color:#ED217C; line-height: 16px;font-weight:700">2 hours
+                <div class="left" style="padding-left:4px;">
+                    <div style="margin-top: 5px; font-size:13px;font-weight:700">Delivery In</div>
+                    <div style="color:#ED217C; line-height: 16px;font-weight:700">2 hours
+                    </div>
                 </div>
-            </div>    
-        </div>
-
-        <img width="100%" src="./image/1621235389450.webp">
+              </li>
+              <li class="d-flex flex-row nav-item dropdown ml-5">
+                <div class="left bg-express_delivery_3 ">
+                </div>
+                <div class="left" style="padding-left:4px;">
+                    <div style="margin-top: 5px; font-size:13px;font-weight:700">Delivery In</div>
+                    <div style="color:#ED217C; line-height: 16px;font-weight:700">2 hours
+                    </div>
+                </div>
+              </li>
+              <li class="d-flex flex-row nav-item dropdown ml-5">
+                <div class="left bg-express_delivery_4 ">
+                </div>
+                <div class="left" style="padding-left:4px;">
+                    <div style="margin-top: 5px; font-size:13px;font-weight:700">Delivery In</div>
+                    <div style="color:#ED217C; line-height: 16px;font-weight:700">2 hours
+                    </div>
+                </div> 
+              </li>
+            </ul>
+          </nav>
+        <nav class="navbar navbar-expand-sm">
+            <ul class="navbar-nav ml-5">
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  CAKES
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown ml-5">
+                <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  FLOWERS
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown ml-5">
+                <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  COMBOS
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown ml-5">
+                <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  CHOCOLATES
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        <img class="img-fluid" src="./image/1621235389450.webp">
         <div id="outer">
-            <div id="inner">
-                <h2>Gift Wrapped With Love</h2>
+            <div class="container">
+                <div class="d-flex flex-row justify-content-center align-items-center">
+                    <h2>Gift Wrapped With Love</h2>
+                </div>
+                <div class="row row-cols-auto">
+                  <div class="col">
+                    <image width="250px" src="./image/flower-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/cake-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/chocolate-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/combo-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/combo-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/flower-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/cake-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/chocolate-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/cake-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/combo-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/chocolate-val.png"></image>
+                  </div>
+                  <div class="col">
+                    <image width="250px" src="./image/flower-val.png"></image>
+                  </div>
+                </div>
             </div>
-            <div style="display: flex; flex-direction: row; margin-right: 10px;">
-                <image width="350px" src="./image/flower-val.png"></image>
-                <image width="350px" src="./image/cake-val.png"></image>
-                <image width="350px" src="./image/combo-val.png"></image>
-                <image width="350px" src="./image/chocolate-val.png"></image>
+        </div>
+        <div id="outer">
+            <div class="container">
+                <div class="d-flex flex-row justify-content-center align-items-center">
+                    <h2>Wide Range Of Gifting Options</h2>
+                </div>
+                <div class="row row-cols-auto">
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/anniversary.png" />
+                        <p style="margin-left: 15%;">Anniversary</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/birthday-gifts.png"></image>
+                        <p style="margin-left: 15%;">Birthday Gifts</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/personalised-gifts.png"></image>
+                        <p style="margin-left: 8%;">Personalised Gifts</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/plants.png"></image>
+                        <p style="margin-left: 35%;">Plants</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/gifts.png"></image>
+                        <p style="margin-left: 35%;">Gifts</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/premium-flowers-33.png"></image>
+                        <p style="margin-left: 35%;">Premium Flowers</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/best-seller.png"></image>
+                        <p style="margin-left: 15%;">Best Seller</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/winni-exculusive.png"></image>
+                        <p style="margin-left: 8%;">Winni Exculusive</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/premium-flowers-33.png"></image>
+                        <p style="margin-left: 35%;">Premium Flowers</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/2hr-delivery.png"></image>
+                        <p style="margin-left: 18%;">2 hr Delivery</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/plants.png"></image>
+                        <p style="margin-left: 35%;">Plants</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/winni-exculusive.png"></image>
+                        <p style="margin-left: 8%;">Winni Exculusive</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/anniversary.png" />
+                        <p style="margin-left: 15%;">Anniversary</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/birthday-gifts.png"></image>
+                        <p style="margin-left: 15%;">Birthday Gifts</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/personalised-gifts.png"></image>
+                        <p style="margin-left: 8%;">Personalised Gifts</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/plants.png"></image>
+                        <p style="margin-left: 35%;">Plants</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/gifts.png"></image>
+                        <p style="margin-left: 35%;">Gifts</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/premium-flowers-33.png"></image>
+                        <p style="margin-left: 35%;">Premium Flowers</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/best-seller.png"></image>
+                        <p style="margin-left: 15%;">Best Seller</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/winni-exculusive.png"></image>
+                        <p style="margin-left: 8%;">Winni Exculusive</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/premium-flowers-33.png"></image>
+                        <p style="margin-left: 35%;">Premium Flowers</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/2hr-delivery.png"></image>
+                        <p style="margin-left: 18%;">2 hr Delivery</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/plants.png"></image>
+                        <p style="margin-left: 35%;">Plants</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 6px;">
+                        <image width="150px" src="./image/winni-exculusive.png"></image>
+                        <p style="margin-left: 8%;">Winni Exculusive</p>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
         
         <div id="outer">
-            <div id="inner">
-                <h2>Wide Range Of Gifting Options</h2>
-            </div>
-            <div style="display: flex; flex-direction: row; margin-right: 10px;">
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/anniversary.png" />
-                    <p style="margin-left: 15%;">Anniversary</p>
+            <div class="container">
+                <div class="d-flex flex-row justify-content-center align-items-center">
+                    <h2>Wide Range Of Gifting Options</h2>
                 </div>
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/birthday-gifts.png"></image>
-                    <p style="margin-left: 15%;">Birthday Gifts</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/personalised-gifts.png"></image>
-                    <p style="margin-left: 8%;">Personalised Gifts</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/plants.png"></image>
-                    <p style="margin-left: 35%;">Plants</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/gifts.png"></image>
-                    <p style="margin-left: 35%;">Gifts</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/premium-flowers-33.png"></image>
-                    <p style="margin-left: 35%;">Premium Flowers</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/best-seller.png"></image>
-                    <p style="margin-left: 15%;">Best Seller</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/winni-exculusive.png"></image>
-                    <p style="margin-left: 8%;">Winni Exculusive</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 6px;">
-                    <image width="150px" src="./image/2hr-delivery.png"></image>
-                    <p style="margin-left: 18%;">2 hr Delivery</p>
+                <div class="row row-cols-auto">
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake1.jpeg" />
+                        <p style="">Butter Scotch Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake6.jpeg"></image>
+                        <p style="">Eternity Love Anniversary Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake4.jpeg"></image>
+                        <p style="margin-top: -2px;"></p>Black Forest Cake</p>
+                        <p style="margin-top: -25px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake3.jpeg"></image>
+                        <p style="">Lovely Red Velvet Heart Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake5.jpeg"></image>
+                        <p style="">Toothsome Chocolate Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake2.jpeg"></image>
+                        <p style="">Delightful Black Forest Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake1.jpeg" />
+                        <p style="">Butter Scotch Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake6.jpeg"></image>
+                        <p style="">Eternity Love Anniversary Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake4.jpeg"></image>
+                        <p style="margin-top: -2px;"></p>Black Forest Cake</p>
+                        <p style="margin-top: -25px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake3.jpeg"></image>
+                        <p style="">Lovely Red Velvet Heart Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake5.jpeg"></image>
+                        <p style="">Toothsome Chocolate Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake2.jpeg"></image>
+                        <p style="">Delightful Black Forest Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake1.jpeg" />
+                        <p style="">Butter Scotch Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake6.jpeg"></image>
+                        <p style="">Eternity Love Anniversary Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake4.jpeg"></image>
+                        <p style="margin-top: -2px;"></p>Black Forest Cake</p>
+                        <p style="margin-top: -25px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake3.jpeg"></image>
+                        <p style="">Lovely Red Velvet Heart Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake5.jpeg"></image>
+                        <p style="">Toothsome Chocolate Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake2.jpeg"></image>
+                        <p style="">Delightful Black Forest Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake1.jpeg" />
+                        <p style="">Butter Scotch Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake6.jpeg"></image>
+                        <p style="">Eternity Love Anniversary Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake4.jpeg"></image>
+                        <p style="margin-top: -2px;"></p>Black Forest Cake</p>
+                        <p style="margin-top: -25px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake3.jpeg"></image>
+                        <p style="">Lovely Red Velvet Heart Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake5.jpeg"></image>
+                        <p style="">Toothsome Chocolate Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div style="display: flex; flex-direction: column; margin-left: 30px;">
+                        <image width="200px" src="./image/cake2.jpeg"></image>
+                        <p style="">Delightful Black Forest Cake</p>
+                        <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
-        
-        <div id="outer">
-            <div id="inner">
-                <h2>Wide Range Of Gifting Options</h2>
-            </div>
-            <div style="display: flex; flex-direction: row; margin-right: 10px;">
-                <div style="display: flex; flex-direction: column; margin-left: 30px;">
-                    <image width="200px" src="./image/cake1.jpeg" />
-                    <p style="">Butter Scotch Cake</p>
-                    <p style="margin-top: -10px; color: red;">&#8377; 599</p>
+        <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+            <footer>
+                <div class="row my-5 justify-content-center py-5">
+                    <div class="col-11">
+                        <div class="row ">
+                            <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                                <h3 class="text-muted mb-md-0 mb-5 bold-text">Winni</h3>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                                <ul class="list-unstyled">
+                                    <li>Home</li>
+                                    <li>About</li>
+                                    <li>Blog</li>
+                                    <li>Portfolio</li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                                <p class="mb-1">605, RATAN ICON BUILDING</p>
+                                <p>SEAWOODS SECTOR</p>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                                <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> Winni All Rights Reserved.</small>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                                <h6 class="mt-55 mt-2 text-muted bold-text"><b>Mamatha</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span>davaskarmamtha@gmail.com</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div style="display: flex; flex-direction: column; margin-left: 30px;">
-                    <image width="200px" src="./image/cake2.jpeg"></image>
-                    <p style="">Delightful Black Forest Cake</p>
-                    <p style="margin-top: -10px; color: red;">&#8377; 599</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 30px;">
-                    <image width="200px" src="./image/cake3.jpeg"></image>
-                    <p style="">Lovely Red Velvet Heart Cake</p>
-                    <p style="margin-top: -10px; color: red;">&#8377; 599</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 30px;">
-                    <image width="200px" src="./image/cake4.jpeg"></image>
-                    <p style="margin-top: -2px;"></p>Black Forest Cake</p>
-                    <p style="margin-top: -25px; color: red;">&#8377; 599</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 30px;">
-                    <image width="200px" src="./image/cake5.jpeg"></image>
-                    <p style="">Toothsome Chocolate Cake</p>
-                    <p style="margin-top: -10px; color: red;">&#8377; 599</p>
-                </div>
-                <div style="display: flex; flex-direction: column; margin-left: 30px;">
-                    <image width="200px" src="./image/cake6.jpeg"></image>
-                    <p style="">Eternity Love Anniversary Cake</p>
-                    <p style="margin-top: -10px; color: red;">&#8377; 599</p>
-                </div>
-            </div>
+            </footer>
         </div>
     </body>
 </HTML>
