@@ -84,21 +84,29 @@
             .rights {
                 font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
             }
+
+            @media (max-width: 767px) {
+                .icon-text {
+                    display:none !important;
+                }
+            }
         </style>
     </head>
     <body>
-        <nav class="d-flex flex-row-reverse navbar navbar-expand-sm navbar-light bg-light">
-            <p class="ml-5">Track Order</p>
-            <p class="ml-5">Currency</p>
-            <p class="ml-5">Partner With us</p>
-            <p class="ml-5">Visit Stores</p>
-            <p class="ml-5">Offers</p>
-            <p class="ml-5">Help</p>
-            <p class="ml-5">+91 - 7678564535</p>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="d-flex flex-row-reverse icon-text">
+                <p class="ml-5">Track Order</p>
+                <p class="ml-5">Currency</p>
+                <p class="ml-5">Partner With us</p>
+                <p class="ml-5">Visit Stores</p>
+                <p class="ml-5">Offers</p>
+                <p class="ml-5">Help</p>
+                <p class="ml-5">+91 - 7678564535</p>
+            </div>
           </nav>
-        <nav class="d-flex flex-col navbar sticky-top navbar-expand-sm navbar-light bg-light">
+        <nav class="d-flex flex-col navbar sticky-top navbar-expand-lg navbar-light bg-light">
             <a id="home_logo" style="margin-right: 25px;"></a>
-            <ul class="navbar-nav ml-5">
+            <ul class="navbar-nav ml-5 icon-text">
               <!-- Dropdown -->
               <li class="d-flex flex-row nav-item dropdown">
                 <input id="searchBox" placeholder="Search for gifts">
@@ -144,7 +152,7 @@
             </ul>
           </nav>
         <nav class="navbar navbar-expand-sm">
-            <ul class="navbar-nav ml-5">
+            <ul class="navbar-nav ml-5 icon-text">
               <!-- Dropdown -->
               <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
